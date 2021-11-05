@@ -21,23 +21,23 @@ Use that to look for simiar domains
 Here are coule of examples.
 
 1)
-from fuzzywuzzy import fuzz
-a = "microsoft.com"
-b = "micros0ft.com"
-print("Match ratio is ", str(fuzz.ratio(a, b)), "%")  // fuzz.ration(a,b) function gives you match score
+from fuzzywuzzy import fuzz<br />
+a = "microsoft.com" <br />
+b = "micros0ft.com" <br />
+print("Match ratio is ", str(fuzz.ratio(a, b)), "%")  // fuzz.ration(a,b) function gives you match score <br />
 
 2)  
-from fuzzywuzzy import fuzz
+from fuzzywuzzy import fuzz <br />
 
-dns_data = open(r'/home/user/Desktop/BEC/your_domain.txt','r') # List of genuine domains owned by you
-output = open(r'/home/user/Desktop/BEC/output.txt','w')		# Output file
+dns_data = open(r'/home/user/Desktop/BEC/your_domain.txt','r') # List of genuine domains owned by you <br />
+output = open(r'/home/user/Desktop/BEC/output.txt','w')		# Output file <br />
 
-for dns in dns_data:    
-    domain = open(r'/home/user/Desktop/BEC/domain-names-data.txt','r') # domain data gathered from proxy/dns/mail logs
-    for site in domain:
-        if ( fuzz.ratio(site.rstrip(),dns.rstrip()) > 80 ):
-            output.write( dns.rstrip() + "\t" + site.rstrip() + "\t" + str(fuzz.ratio(site.rstrip(),dns.rstrip())))
-            output.write("\n")
+for dns in dns_data:    <br />
+    domain = open(r'/home/user/Desktop/BEC/domain-names-data.txt','r') # domain data gathered from proxy/dns/mail logs <br />
+    for site in domain: <br />
+        if ( fuzz.ratio(site.rstrip(),dns.rstrip()) > 80 ): <br />
+            output.write( dns.rstrip() + "\t" + site.rstrip() + "\t" + str(fuzz.ratio(site.rstrip(),dns.rstrip()))) <br />
+            output.write("\n") <br />
 			
 		
 If you have access to whois database then you can run this code against newly registered domain everyday and probably you can get the result early!!!
