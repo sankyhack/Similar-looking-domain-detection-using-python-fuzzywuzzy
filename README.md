@@ -27,6 +27,7 @@ Here are coule of examples.
 	print("Match ratio is ", str(fuzz.ratio(a, b)), "%")  // fuzz.ration(a,b) function gives you match score <br />
 
 2) Working code <br />
+
 	from fuzzywuzzy import fuzz <br />
 
 	dns_data = open(r'/home/user/Desktop/BEC/your_domain.txt','r') # List of genuine domains owned by you <br />
