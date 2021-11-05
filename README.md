@@ -34,8 +34,8 @@ Here are coule of examples.
 	output = open(r'/home/user/Desktop/BEC/output.txt','w')		# Output file <br />
 
 	for dns in dns_data:    <br />
-	    domain = open(r'/home/user/Desktop/BEC/domain-names-data.txt','r') # domain data gathered from proxy/dns/mail logs <br />
-	    for site in domain: <br />
+	>domain = open(r'/home/user/Desktop/BEC/domain-names-data.txt','r') # domain data gathered from proxy/dns/mail logs <br />
+	>for site in domain: <br />
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( fuzz.ratio(site.rstrip(),dns.rstrip()) > 80 ): <br />
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output.write("Match ratio is: \t" + dns.rstrip() + "\t" + site.rstrip() + "\t" + str(fuzz.ratio(site.rstrip(),dns.rstrip()))) <br />
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output.write("\n") <br />
