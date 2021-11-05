@@ -36,9 +36,9 @@ Here are coule of examples.
 	for dns in dns_data:    <br />
 	>domain = open(r'/home/user/Desktop/BEC/domain-names-data.txt','r') # domain data gathered from proxy/dns/mail logs <br />
 	>for site in domain: <br />
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( fuzz.ratio(site.rstrip(),dns.rstrip()) > 80 ): <br />
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output.write("Match ratio is: \t" + dns.rstrip() + "\t" + site.rstrip() + "\t" + str(fuzz.ratio(site.rstrip(),dns.rstrip()))) <br />
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;output.write("\n") <br />
+	>>if ( fuzz.ratio(site.rstrip(),dns.rstrip()) > 80 ): <br />
+	>>>output.write("Match ratio is: \t" + dns.rstrip() + "\t" + site.rstrip() + "\t" + str(fuzz.ratio(site.rstrip(),dns.rstrip()))) <br />
+	>>>output.write("\n") <br />
 			
 		
 If you have access to whois database then you can run this code against newly registered domain everyday and probably you can get the result early!!!
