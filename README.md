@@ -20,13 +20,13 @@ Use that to look for simiar domains
 
 Here are coule of examples.
 
-1)
+1) Basic example <br />  
 from fuzzywuzzy import fuzz<br />
 a = "microsoft.com" <br />
 b = "micros0ft.com" <br />
 print("Match ratio is ", str(fuzz.ratio(a, b)), "%")  // fuzz.ration(a,b) function gives you match score <br />
 
-2)  
+2) Working code <br />
 from fuzzywuzzy import fuzz <br />
 
 dns_data = open(r'/home/user/Desktop/BEC/your_domain.txt','r') # List of genuine domains owned by you <br />
