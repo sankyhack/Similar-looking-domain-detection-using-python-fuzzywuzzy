@@ -1,6 +1,6 @@
 from fuzzywuzzy import fuzz
 
-dns_data = open(r'/home/user/Desktop/BEC/your_domain.txt','r') # List of genuine domains owned by you, add your vendor/partner domains as well (change path as per your directory structure)
+dns_data = open(r'/home/user/Desktop/BEC/your_domains.txt','r') # List of genuine domains owned by you, add your vendor/partner domains as well (change path as per your directory structure)
 output = open(r'/home/user/Desktop/BEC/output.txt','w')		# Output file (change path as per your directory structure)
 
 for dns in dns_data:    
